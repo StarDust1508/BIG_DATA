@@ -1,0 +1,10 @@
+Big data is more than just a buzzword.
+It is a real change in how we store and process information.
+Big data systems use distributed storage and distributed computation.
+Apache Hadoop was a pioneer in this field.
+Hadoop introduced HDFS for storage and MapReduce for computation.
+Today Apache Spark is the most popular framework for big data.
+Spark improved on Hadoop by keeping data in memory between steps.
+Big data is everywhere from banking to medicine to law.
+Data privacy and data quality remain hard problems.
+Even with big data, the basics still matter most.

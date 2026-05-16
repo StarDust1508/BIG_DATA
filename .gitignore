@@ -1,0 +1,90 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.synctex.gz
+
+# ============================================================
+# IDE
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Spark
+# ============================================================
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+_SUCCESS
+
+# ============================================================
+# Большие данные — не коммитим (генерируются скриптами)
+# ============================================================
+datasets/*.csv
+datasets/*.parquet
+datasets/*.log
+datasets/*.json
+datasets/etl_output/
+datasets/etl_reports/
+datasets/anomalies_output/
+datasets/contracts_analytics/
+datasets/legal_docs_predictions.parquet
+datasets/skewed_tx.parquet
+datasets/bench_10m.csv
+datasets/bench_10m.parquet
+datasets/clients_anonymous.parquet
+datasets/mapping.parquet
+datasets/models/
+
+# Учебные логи практик
+03_hadoop_HDFS/практика_3_логи/access.log
+
+# ============================================================
+# Секреты
+# ============================================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+salt.txt
+secrets/
+
+# ============================================================
+# Hadoop / Docker
+# ============================================================
+hadoop_namenode/
+hadoop_datanode/
+hadoop.env
+
+# ============================================================
+# Логи pipeline'ов
+# ============================================================
+audit.log
+*.log
+metrics_latest.json
