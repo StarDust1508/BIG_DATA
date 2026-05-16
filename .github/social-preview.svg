@@ -1,0 +1,115 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+
+  <!-- Decorative grid -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="100" x2="1280" y2="100"/>
+    <line x1="0" y1="200" x2="1280" y2="200"/>
+    <line x1="0" y1="300" x2="1280" y2="300"/>
+    <line x1="0" y1="400" x2="1280" y2="400"/>
+    <line x1="0" y1="500" x2="1280" y2="500"/>
+  </g>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1280" height="6" fill="url(#accent)"/>
+
+  <!-- Main title -->
+  <text x="80" y="180" font-family="-apple-system, system-ui, sans-serif" font-size="76" font-weight="800" fill="#f1f5f9">
+    BIG DATA
+  </text>
+  <text x="80" y="240" font-family="-apple-system, system-ui, sans-serif" font-size="36" font-weight="400" fill="#94a3b8">
+    учебный курс на русском языке
+  </text>
+
+  <!-- Accent line -->
+  <rect x="80" y="270" width="120" height="4" fill="url(#accent)"/>
+
+  <!-- Key features -->
+  <g font-family="-apple-system, system-ui, sans-serif" font-size="22" fill="#cbd5e1">
+    <text x="80" y="340">📊 24 000+ строк материала · 7 модулей · 25+ практик</text>
+    <text x="80" y="380">⚡ Apache Spark · PySpark · MLlib · Kafka · Lakehouse</text>
+    <text x="80" y="420">⚖️ Правовой контекст: 152-ФЗ · GDPR · AI Act</text>
+    <text x="80" y="460">🎯 3 сквозных проекта + 6 квизов + финальный экзамен</text>
+  </g>
+
+  <!-- Tech badges -->
+  <g font-family="-apple-system, system-ui, sans-serif" font-size="16" font-weight="600">
+    <!-- Python -->
+    <rect x="80" y="510" width="120" height="36" rx="6" fill="#3b82f6"/>
+    <text x="140" y="534" text-anchor="middle" fill="white">Python 3.10+</text>
+
+    <!-- PySpark -->
+    <rect x="215" y="510" width="120" height="36" rx="6" fill="#f97316"/>
+    <text x="275" y="534" text-anchor="middle" fill="white">PySpark 3.5</text>
+
+    <!-- MIT -->
+    <rect x="350" y="510" width="100" height="36" rx="6" fill="#10b981"/>
+    <text x="400" y="534" text-anchor="middle" fill="white">MIT License</text>
+
+    <!-- Free -->
+    <rect x="465" y="510" width="120" height="36" rx="6" fill="#8b5cf6"/>
+    <text x="525" y="534" text-anchor="middle" fill="white">100% бесплатно</text>
+
+    <!-- Russian -->
+    <rect x="600" y="510" width="140" height="36" rx="6" fill="#ef4444"/>
+    <text x="670" y="534" text-anchor="middle" fill="white">🇷🇺 На русском</text>
+  </g>
+
+  <!-- Right side: data flow visualization -->
+  <g transform="translate(820, 100)">
+    <!-- Source -->
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#1e40af" stroke="#3b82f6" stroke-width="2"/>
+    <text x="80" y="38" font-family="-apple-system" font-size="18" font-weight="600" fill="white" text-anchor="middle">Источники</text>
+
+    <!-- Arrow -->
+    <line x1="80" y1="60" x2="80" y2="100" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Storage -->
+    <rect x="0" y="100" width="160" height="60" rx="8" fill="#7c2d12" stroke="#ea580c" stroke-width="2"/>
+    <text x="80" y="138" font-family="-apple-system" font-size="18" font-weight="600" fill="white" text-anchor="middle">Parquet / Delta</text>
+
+    <line x1="80" y1="160" x2="80" y2="200" stroke="#64748b" stroke-width="2"/>
+
+    <!-- Spark -->
+    <rect x="0" y="200" width="160" height="60" rx="8" fill="#6b21a8" stroke="#a855f7" stroke-width="2"/>
+    <text x="80" y="232" font-family="-apple-system" font-size="20" font-weight="700" fill="white" text-anchor="middle">PySpark</text>
+    <text x="80" y="252" font-family="-apple-system" font-size="13" fill="#e9d5ff" text-anchor="middle">Catalyst · MLlib</text>
+
+    <line x1="80" y1="260" x2="80" y2="300" stroke="#64748b" stroke-width="2"/>
+
+    <!-- ML / BI -->
+    <rect x="0" y="300" width="160" height="60" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+    <text x="80" y="338" font-family="-apple-system" font-size="18" font-weight="600" fill="white" text-anchor="middle">ML · BI · Reports</text>
+
+    <!-- Side annotations -->
+    <text x="180" y="40" font-family="-apple-system" font-size="14" fill="#94a3b8">CSV · JSON · API</text>
+    <text x="180" y="140" font-family="-apple-system" font-size="14" fill="#94a3b8">S3 · HDFS · MinIO</text>
+    <text x="180" y="240" font-family="-apple-system" font-size="14" fill="#94a3b8">distributed compute</text>
+    <text x="180" y="340" font-family="-apple-system" font-size="14" fill="#94a3b8">value · insights</text>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- URL footer -->
+  <text x="80" y="600" font-family="-apple-system, system-ui, monospace" font-size="20" fill="#64748b">
+    github.com/StarDust1508/BIG_DATA
+  </text>
+</svg>
