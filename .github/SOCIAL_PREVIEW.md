@@ -14,11 +14,9 @@
 ## Конвертация SVG → PNG (если GitHub не примет SVG)
 
 ```bash
-# macOS / Linux через rsvg-convert
 brew install librsvg
 rsvg-convert -w 1280 -h 640 .github/social-preview.svg -o .github/social-preview.png
 
-# Или через ImageMagick
 brew install imagemagick
 convert -density 300 -background none .github/social-preview.svg .github/social-preview.png
 ```

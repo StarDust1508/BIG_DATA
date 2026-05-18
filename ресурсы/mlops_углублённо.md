@@ -207,8 +207,7 @@ dvc add data/train.csv
 git add data/train.csv.dvc .gitignore
 git commit -m "Add train v1"
 
-# Через год
-dvc checkout <старый коммит>   # вернёт ту версию данных
+dvc checkout <старый коммит>
 ```
 
 DVC хранит метаданные в Git, сами файлы — в S3/GCS/локально.

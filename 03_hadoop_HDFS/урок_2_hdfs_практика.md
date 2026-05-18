@@ -70,24 +70,18 @@ docker exec -it namenode bash
 Внутри контейнера или на машине с Hadoop:
 
 ```bash
-# Список корня
 hdfs dfs -ls /
 
-# Создать папку
 hdfs dfs -mkdir -p /user/me/raw
 
-# Положить файл
 hdfs dfs -put localfile.csv /user/me/raw/
 
-# Прочитать
 hdfs dfs -cat /user/me/raw/localfile.csv | head
 
-# Размер
 hdfs dfs -du -h /user/me/
 
-# Удалить
 hdfs dfs -rm /user/me/raw/localfile.csv
-hdfs dfs -rm -r /user/me/                  # рекурсивно
+hdfs dfs -rm -r /user/me/
 ```
 
 Шпаргалка со всеми командами: [ресурсы/шпаргалки/hdfs_hadoop.md](../ресурсы/шпаргалки/hdfs_hadoop.md).
@@ -97,13 +91,10 @@ hdfs dfs -rm -r /user/me/                  # рекурсивно
 ## Часть 3. Посмотреть, как файл разбит на блоки
 
 ```bash
-# Создаём файл побольше — например, 500 МБ
 dd if=/dev/urandom of=/tmp/big.bin bs=1M count=500
 
-# Кладём в HDFS
 hdfs dfs -put /tmp/big.bin /user/me/
 
-# Смотрим блоки
 hdfs fsck /user/me/big.bin -files -blocks -locations
 ```
 
@@ -123,9 +114,9 @@ hdfs fsck /user/me/big.bin -files -blocks -locations
 ## Часть 4. Репликация
 
 ```bash
-hdfs dfs -setrep 3 /user/me/big.bin       # 3 копии
-hdfs dfs -setrep 1 /tmp                    # 1 копия (хватит для tmp)
-hdfs dfsadmin -report                       # отчёт о DataNode'ах
+hdfs dfs -setrep 3 /user/me/big.bin
+hdfs dfs -setrep 1 /tmp
+hdfs dfsadmin -report
 ```
 
 Replication=3 — стандарт для prod. Replication=1 — учебно/dev.
@@ -137,7 +128,7 @@ Replication=3 — стандарт для prod. Replication=1 — учебно/d
 HDFS наследует POSIX-модель:
 
 ```bash
-hdfs dfs -chmod 750 /user/me/sensitive/    # rwxr-x---
+hdfs dfs -chmod 750 /user/me/sensitive/
 hdfs dfs -chown analytics:analytics /user/me/sensitive/
 hdfs dfs -setfacl -m user:bob:r-- /user/me/sensitive/
 ```

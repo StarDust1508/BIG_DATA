@@ -85,7 +85,6 @@ Parquet + Model Card + Audit log
 Данные берутся из модуля 02 (`datasets/clients.csv`, `datasets/transactions.csv`):
 
 ```bash
-# Если ещё нет:
 python3 02_python_для_данных/практика_1_eda.py
 ```
 

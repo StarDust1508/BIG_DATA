@@ -5,28 +5,28 @@
 ## Файловые операции (`hdfs dfs` ~ `hadoop fs`)
 
 ```bash
-hdfs dfs -ls /                       # список корня
-hdfs dfs -ls -R /user                # рекурсивно
-hdfs dfs -mkdir -p /user/me/data     # создать папки
-hdfs dfs -put local.csv /user/me/    # загрузить из локалки
+hdfs dfs -ls /
+hdfs dfs -ls -R /user
+hdfs dfs -mkdir -p /user/me/data
+hdfs dfs -put local.csv /user/me/
 hdfs dfs -copyFromLocal *.csv /data/
-hdfs dfs -get /user/me/file.csv ./   # выгрузить на локалку
-hdfs dfs -rm /user/me/file.csv       # удалить
-hdfs dfs -rm -r /user/me/            # рекурсивно
+hdfs dfs -get /user/me/file.csv ./
+hdfs dfs -rm /user/me/file.csv
+hdfs dfs -rm -r /user/me/
 hdfs dfs -cat /user/me/file.txt
 hdfs dfs -tail /user/me/file.txt
-hdfs dfs -du -h /user                # размер
-hdfs dfs -df -h                      # свободное место
-hdfs dfs -count /data                # files, dirs, bytes
-hdfs dfs -chmod 750 /data/private    # права
+hdfs dfs -du -h /user
+hdfs dfs -df -h
+hdfs dfs -count /data
+hdfs dfs -chmod 750 /data/private
 hdfs dfs -chown user:group /data
 ```
 
 ## Информация о кластере
 
 ```bash
-hdfs dfsadmin -report               # отчёт о датанодах
-hdfs fsck /                         # проверка целостности
+hdfs dfsadmin -report
+hdfs fsck /
 hdfs fsck /file -files -blocks -locations
 hdfs version
 ```
@@ -34,8 +34,8 @@ hdfs version
 ## Репликация
 
 ```bash
-hdfs dfs -setrep -R 3 /data        # уровень репликации 3
-hdfs dfs -setrep 1 /tmp            # для tmp хватит 1
+hdfs dfs -setrep -R 3 /data
+hdfs dfs -setrep 1 /tmp
 ```
 
 ## Архив

@@ -92,7 +92,6 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
     -mapper  "python3 mapper.py" \
     -reducer "python3 reducer.py"
 
-# Посмотреть результат
 hdfs dfs -cat /user/me/wordcount_out/part-00000 | head
 ```
 

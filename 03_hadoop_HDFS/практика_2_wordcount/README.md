@@ -19,7 +19,6 @@
 Из папки `практика_2_wordcount/`:
 
 ```bash
-# Простейший вариант
 cat sample.txt | python3 mapper.py | sort | python3 reducer.py
 ```
 
@@ -46,7 +45,6 @@ change  1
 Попробуйте на любом большом тексте на русском или английском:
 
 ```bash
-# Например, скачать «Войну и мир» или взять README проекта
 cat ../README.md | python3 mapper.py | sort | python3 reducer.py | head -20
 ```
 
@@ -59,10 +57,8 @@ cat ../README.md | python3 mapper.py | sort | python3 reducer.py | head -20
 При наличии живого кластера:
 
 ```bash
-# 1. Положить текст и скрипты
 hdfs dfs -put sample.txt /user/study/
 
-# 2. Запустить
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
     -files mapper.py,reducer.py \
     -input  /user/study/sample.txt \
@@ -71,7 +67,6 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
     -combiner "python3 reducer.py" \
     -reducer  "python3 reducer.py"
 
-# 3. Посмотреть результат
 hdfs dfs -cat /user/study/wc_out/part-00000 | head
 ```
 
@@ -84,10 +79,8 @@ hdfs dfs -cat /user/study/wc_out/part-00000 | head
 Сгенерируйте большой файл и прогоните локально:
 
 ```bash
-# Сгенерировать 100 МБ повторяющегося текста
 python3 -c "import sys; print((open('sample.txt').read() + ' ') * 50000)" > big.txt
 
-# Запустить
 time cat big.txt | python3 mapper.py | sort | python3 reducer.py > /dev/null
 ```
 

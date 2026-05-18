@@ -7,7 +7,6 @@
 ## Вариант 1 — cron (просто)
 
 ```bash
-# crontab -e
 0 6 * * * cd /path/БигДата/07_проекты/проект_3_etl_отчётность && \
     /path/.venv/bin/python pipeline.py --run-date $(date +\%Y-\%m-\%d) >> cron.log 2>&1
 ```

@@ -11,21 +11,16 @@
 В терминале на вашем Mac:
 
 ```bash
-cd ~/Desktop/БигДата
+cd ~/Desktop/BIG_DATA
 
-# Если git ещё не инициализирован — в этом курсе уже сделано Claude,
-# но если что — повторите:
 git init
 git branch -M main
 
-# Подключите ваш GitHub-репозиторий (если ещё не подключён)
 git remote add origin https://github.com/StarDust1508/BIG_DATA.git
 
-# Закоммитьте всё
 git add .
 git commit -m "Initial commit: полный курс Big Data на русском"
 
-# Запушьте
 git push -u origin main
 ```
 
@@ -74,13 +69,12 @@ git config --global user.email "Av9272779188@gmail.com"
 
 В Terminal перейдите в папку курса:
 ```bash
-cd ~/Desktop/БигДата
+cd ~/Desktop/BIG_DATA
 ```
 
 Проверьте, что вы в правильной папке:
 ```bash
 ls -la
-# Должны увидеть: README.md, requirements.txt, 00_введение, 01_основы_BigData, ...
 ```
 
 ---
@@ -107,27 +101,19 @@ ls -la
 ### Шаг 6: Команды для публикации
 
 ```bash
-cd ~/Desktop/БигДата
+cd ~/Desktop/BIG_DATA
 
-# Инициализация (если ещё не сделано)
 git init
 git branch -M main
 
-# Связь с GitHub
 git remote add origin https://github.com/StarDust1508/BIG_DATA.git
-# Если remote уже есть — выполнит ошибку, тогда:
-# git remote set-url origin https://github.com/StarDust1508/BIG_DATA.git
 
-# Посмотреть, что Git готов закоммитить
 git status
 
-# Добавить все файлы
 git add .
 
-# Закоммитить
 git commit -m "Initial commit: полный курс Big Data на русском, 24000+ строк"
 
-# Запушить
 git push -u origin main
 ```
 
@@ -161,14 +147,13 @@ git push -u origin main
 Объедините истории:
 ```bash
 git pull origin main --rebase --allow-unrelated-histories
-# Решите конфликты, если они есть (откройте файлы с маркерами <<<<<<<)
 git push -u origin main
 ```
 
 Или **сначала затрите** контент GitHub:
 ```bash
 git pull origin main --rebase
-git push -f origin main    # ⚠️ перезапишет GitHub полностью
+git push -f origin main
 ```
 
 ### Если push выдаёт «authentication failed»

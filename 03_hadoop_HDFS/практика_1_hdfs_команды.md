@@ -15,10 +15,8 @@ docker exec -it namenode bash
 
 Загрузить учебный файл (внутри контейнера или с хоста):
 ```bash
-# Скопировать transactions_sample.csv из локального датасета в контейнер
 docker cp datasets/transactions_sample.csv namenode:/tmp/
 
-# Внутри контейнера
 hdfs dfs -mkdir -p /user/study
 hdfs dfs -put /tmp/transactions_sample.csv /user/study/
 ```
@@ -75,7 +73,7 @@ hdfs fsck /user/study/big.bin -files -blocks -locations
 <summary>Подсказка</summary>
 
 ```bash
-hdfs dfs -ls /user/study/        # колонка после permissions = factor
+hdfs dfs -ls /user/study/
 hdfs dfs -setrep 2 /user/study/big.bin
 hdfs fsck /user/study/big.bin -files -blocks -locations
 ```
